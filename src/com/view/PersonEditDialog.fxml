@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="280.0" prefWidth="288.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.view.PersonEditDialogController">
+   <children>
+      <GridPane layoutX="5.0" layoutY="30.0" prefHeight="130.0" prefWidth="278.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="78.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="15.0" prefWidth="80.0" text="姓名：">
+               <padding>
+                  <Insets left="34.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="80.0" text="技能：" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="34.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="80.0" text="状态：" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="34.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="80.0" text="开始时间：" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="80.0" text="结束时间：" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="statusChB" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="startDate" editable="false" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="endDate" editable="false" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="nameField" maxWidth="100.0" prefHeight="20.0" prefWidth="50.0" GridPane.columnIndex="1" />
+            <TextField fx:id="skillField" maxWidth="100.0" prefHeight="23.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="124.0" layoutY="198.0">
+         <children>
+            <Button layoutX="100.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleOk" text="保存" />
+         </children>
+      </HBox>
+      <HBox layoutX="199.0" layoutY="198.0">
+         <children>
+            <Button layoutX="174.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleCancel" text="取消" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
